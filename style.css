@@ -183,3 +183,104 @@ h1 {
 .details {
     margin-top: 5.8rem;
 }
+
+/* ---------- CONTATOS ----------- */
+#contatos {
+    padding-block: 6rem;
+    background-color: var(--second-color);
+}
+
+#contatos, .ctt1, .ctt2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ctt1 {
+    flex-direction: column;
+}
+
+.ctt1 h1 {
+    max-width: 15rem;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+.ctt1 p {
+    color: rgba(118, 118, 118, 1);
+    max-width: 18.5rem;
+    text-align: left;
+    margin-bottom: 2.4rem;
+}
+
+.ctt1 button {
+    display: flex;
+    padding: 0.5rem;
+    max-width: 12rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--buttoncolor);
+    border-radius: 0.4rem;
+    border: none;
+    gap: 0.5rem;
+}
+
+.ctt1 button svg {
+    max-height: 1.2rem;
+    max-width: 1.2rem;
+}
+
+.ctt1 button:hover {
+    background-color: rgb(75, 231, 173);
+    transition: 0.6s;
+}
+
+.ctt2 ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: left;
+    text-align: left;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.ctt2 ul li {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+/*--------- FOOTER  ----------- */
+#footer {
+    padding-block: 6rem;
+    background-color: var(--buttoncolor);
+    text-decoration: none;
+}
+
+#footer, .salon, .links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.salon {
+    flex-direction: column;
+    text-align: left;
+}
+
+.salon svg {
+    margin-bottom: 2.4rem;
+}
+
+.salon p {
+    color: rgba(249, 249, 249, 1);
+    margin-bottom: 1rem;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
