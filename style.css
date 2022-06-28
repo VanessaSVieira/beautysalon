@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -30,6 +34,13 @@ h1 {
 }
 
 /* ----- NAVIGATION ----- */
+nav {
+    position: fixed;
+    width: 100vw;
+
+    z-index: 100;
+}
+
 #header {
     display: flex;
     justify-content: space-between;
@@ -41,6 +52,56 @@ h1 {
     list-style: none;
     display: flex;
     gap: 3.2rem;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: black
+}
+
+nav#navigation.scroll .menu ul li a {
+    color: var(--buttoncolor);
+    opacity: 0.6;
+}
+
+nav#navigation .menu li a {
+    transition: opacity 0.4s;
+}
+
+nav#navigation .menu li a.active,
+nav#navigation .menu li a:hover {
+    opacity: 1;
+    font-weight: 700;
+}
+
+nav#navigation .menu li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--buttoncolor);
+
+    position: relative;
+    bottom: -2rem;
+    left: -0.5rem;
+
+    display: block;
+
+    transition: width 0.2s;
+}
+
+nav#navigation.scroll .menu li a::after {
+    background-color: white;
+}
+
+nav#navigation .menu li a.active::after,
+nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+}
+
+nav#navigation.scroll .menu li a.active,
+nav#navigation.scroll .menu li a:hover {
+    opacity: 1;
 }
 
 /* ------ INICIO ----------- */
@@ -74,12 +135,16 @@ h1 {
 
 .container button {
     padding: 0.8rem;
-    color: white;
     background-color: var(--buttoncolor);
     border-radius: 0.4rem;
     border: none;
 
 } 
+
+.container button a {
+    text-decoration: none;
+    color: white
+}
 
 .container button:hover {
     background-color: rgb(75, 231, 173);
@@ -212,18 +277,19 @@ h1 {
     margin-bottom: 2.4rem;
 }
 
-.ctt1 button {
+.button  {
     display: flex;
-    padding: 0.5rem;
+    padding: 0.7rem;
     max-width: 12rem;
     text-align: center;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: var(--buttoncolor);
+    background: var(--buttoncolor);
     border-radius: 0.4rem;
     border: none;
     gap: 0.5rem;
+    text-decoration: none;
+    color: white;
 }
 
 .ctt1 button svg {
@@ -231,7 +297,12 @@ h1 {
     max-width: 1.2rem;
 }
 
-.ctt1 button:hover {
+/*.ctt1 button a {
+    text-decoration: none;
+    color: white;
+}*/
+
+.button:hover {
     background-color: rgb(75, 231, 173);
     transition: 0.6s;
 }
@@ -283,4 +354,27 @@ h1 {
     display: flex;
     gap: 2rem;
     align-items: center;
+}
+
+/* -------- backToTop button -------- */
+#backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTopButton circle {
+    fill: hsl(170, 100%, 26%);
 }
