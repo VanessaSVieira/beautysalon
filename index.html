@@ -30,14 +30,35 @@
                 </main>
 
             <div class="menu">
-                <ul>
-                    <li> <a href="#inicio"> Início</a></li>
-                    <li> <a href="#sobre"> Sobre</a></li>
-                    <li> <a href="#serviços">Serviços</a> </li>
-                    <li> <a href="#depoimento"> Depoimentos</a></li>
-                    <li> <a href="#contatos"> Contato</a></li>
+                <ul id="list-menu">
+                    <li> <a href="#inicio" class="option1"> Início</a></li>
+                    <li> <a href="#sobre" class="option2"> Sobre</a></li>
+                    <li> <a href="#serviços" class="option3">Serviços</a> </li>
+                    <li> <a href="#depoimento" class="option4"> Depoimentos</a></li>
+                    <li> <a href="#contatos" class="option5"> Contato</a></li>
                 </ul>
             </div>
+
+            <div class="menu-mobile">
+                <button id="button-menu"
+                class="btn-menu"> 
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M3 12H21" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M3 6H21" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M3 18H21" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                 </button>
+    
+                <button id="close-menu"
+                class="btn-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="#69B99D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                </button>
+                </div>
+
         </div>
     </nav>
 
@@ -189,6 +210,7 @@
                     </svg>
                 
         </div>
+
         <div class="details">
             <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="6" cy="6" r="6" fill="#69B99D"/>

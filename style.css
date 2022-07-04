@@ -48,6 +48,14 @@ nav {
     margin-inline: 12rem;
 }
 
+#button-menu {
+    display: none;
+}
+
+#close-menu {
+    display: none;
+}
+
 .menu ul {
     list-style: none;
     display: flex;
@@ -297,11 +305,6 @@ nav#navigation.scroll .menu li a:hover {
     max-width: 1.2rem;
 }
 
-/*.ctt1 button a {
-    text-decoration: none;
-    color: white;
-}*/
-
 .button:hover {
     background-color: rgb(75, 231, 173);
     transition: 0.6s;
@@ -377,4 +380,197 @@ nav#navigation.scroll .menu li a:hover {
 
 #backToTopButton circle {
     fill: hsl(170, 100%, 26%);
+}
+
+/* ------------- MOBILE ------------- */
+@media(max-width: 600px) {
+
+/* ------- BODY ---------- */
+html, body {
+    font-family: 'DM Sans', sans-serif, 'Rubik', sans-serif, 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+
+/*------- MENU EXPANDED ---------- */
+.menu #list-menu {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 5rem;
+    right: 0;
+    background-color: var(--second-color);
+    flex-direction: column;
+    height: 0;
+    transition: 0.5s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#header {
+    margin: 0;
+}
+
+#header, .logo, #button-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#button-menu {
+    margin-right: 2.4rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#navigation.active #close-menu {
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 2.4rem;
+}
+
+#navigation.active #button-menu {
+    display: none;
+}
+
+#navigation.active #list-menu {
+    visibility: visible;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#navigation.active #header {
+    background-color: var(--second-color);   
+}
+
+#list-menu a {
+    font-weight: bold;
+    font-size: 30px;
+    gap: 6.4rem;
+}
+
+/* ------ INICIO ------- */
+#inicio {
+   display: flex;
+   flex-direction: row;
+   flex-direction: column-reverse;
+}
+
+.container {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.container h1 {
+    align-items: center;
+    text-align: center;
+    max-width: 32.7rem;
+    max-height: 9rem;
+    margin-inline: 2.4rem;
+    padding: 0;
+}
+
+.container p {
+    text-align: center;
+    max-width: 29.8rem;
+}
+
+.img1 {
+    margin: 0;
+}
+
+.img1 img {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 3.2rem;
+}
+
+/*--------- ABOUT -----------*/
+#sobre {
+    display: flex;
+    flex-direction: column;
+}
+
+.img2 img {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about p, p, p {
+    margin-top: 1.6rem;
+    max-width: 32.7rem;
+    max-height: 59.8rem;
+}
+
+/* -------- SERVIÇOS -----------*/
+.services h1 {
+    text-align: left;
+    margin-left: 2.4rem;
+}
+
+.services p {
+    text-align: left;
+    margin-left: 2.4rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2.4rem;
+}
+
+.box1, .box2, .box3 {
+    max-width: 32.7rem;
+    max-height: 37.2rem;
+}
+
+/*------- DEPOIMENTOS ------- */
+#depoimento h1 {
+    text-align: left;
+    max-width: 25.9rem;
+    max-height: 13.5rem;
+    margin-left: 2.4rem;
+    margin-right: 9.2rem;
+}
+
+.clientes svg:nth-child(1) {
+    max-width: 26rem;
+    max-height: 30.2rem;
+    margin-inline: 2.4rem;
+}
+
+.clientes svg:nth-child(2) {
+    display: none;
+}
+
+#contatos, .ctt1, .ctt2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.4rem;
+}
+
+#footer, .salon, .links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.4rem;
+}  
+
+.links {
+    margin-top: 3.4rem;
+}
+
+
+
+
+
 }

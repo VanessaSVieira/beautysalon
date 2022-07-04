@@ -1,3 +1,32 @@
+const buttonMenu = document.getElementById('button-menu');
+const closeMenu = document.getElementById('close-menu');
+
+function toggleMenu() {
+    const navigation = document.getElementById('navigation');
+    navigation.classList.toggle('active');
+}
+
+function close() {
+    const nav = document.getElementById('navigation');
+    nav.classList.remove('active');
+}
+
+buttonMenu.addEventListener('click', toggleMenu);
+closeMenu.addEventListener('click', close);
+
+
+/*const option1 = documente.querySelector('.option1');
+const option2 = documente.querySelector('.option2');
+const option3 = documente.querySelector('.option3');
+const option4 = documente.querySelector('.option4');
+const option5 = documente.querySelector('.option5');
+
+const $buttonMenu = document.querySelector('.button-menu');
+
+option1.addEventListener('click', function() {
+    a.classList.remove('in');
+}) */
+
 window.addEventListener('scroll', onScroll)
 
 onScroll()
@@ -76,6 +105,5 @@ ScrollReveal({
     origin: 'top',
     distance: '30px',
     duration: 700,
-}).reveal(`#home, #home img, #home .stats, #services,
-#services header, #services .card, #about, #about header, 
-#about .content`)
+}).reveal(`#header, #inicio .img1, #sobre, .about, #serviços,
+.box1, .box2, .box3, #depoimento, .clientes, #contatos, #footer` ) 
